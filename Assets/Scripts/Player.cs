@@ -3,6 +3,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 	public float speed = 5;
+	public int damage = 2;
 	private Rigidbody2D _rb;
 	
 	private void Start()
@@ -13,6 +14,10 @@ public class Player : MonoBehaviour
 	private void FixedUpdate()
 	{
 		Move();
+		if (Input.GetMouseButton(0))
+		{
+			Debug.Log("Shot");
+		}
 	}
 
 	void Move()
